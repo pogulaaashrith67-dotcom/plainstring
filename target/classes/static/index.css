@@ -1,3 +1,9 @@
 h1{
     color: rgb(233, 13, 49);
 }
+
+ .navbar{
+    border-style: solid;
+    border-width: 1px;
+    border-color:grey;
+ }
