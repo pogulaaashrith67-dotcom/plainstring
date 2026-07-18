@@ -34,3 +34,19 @@ function toggleUser(){
     usegender.innerHTML = users[id].gender;
 
 }
+
+function randomUser(){
+    fetch('https://randomuser.me/api')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        var userData =data.results[0];
+    var userimage=document.getElementById("userimage");
+    userimage.src =userData.picture.large;
+    var username=document.getElementById("user-name");
+    username.textContent = userData.name.first + " " + userData.name.last;
+    var usergender=document.getElementById("user-gender");
+    usegender.innerHTML = userData.gender;
+    })
+}
